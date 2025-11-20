@@ -1,0 +1,37 @@
+body {
+  background-color: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* SEARCH */
+.search-field {
+  width: 250px;
+}
+
+/* LIST AREA */
+.scroll-area {
+  height: 85vh;
+  overflow-y: auto;
+}
+
+.history-card {
+  border: 1px solid #d9d9d9;
+  background: #ffffff;
+  transition: 0.2s;
+}
+
+.history-card.active {
+  background: #66b6c8;
+  color: white;
+}
+
+/* DETAIL BOX */
+.detail-box {
+  background-color: white;
+}
+
+/* CASH BOX */
+.cash-box {
+  background-color: #66b6c8;
+  color: white;
+}

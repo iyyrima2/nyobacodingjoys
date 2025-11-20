@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasir | Joy’s</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="kasir.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar bg-white shadow-sm px-3 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+      <i class="bi bi-list fs-4 me-3" id="menu-toggle" style="cursor: pointer;"></i>
+
+      <a href="kasir.html" class="d-flex align-items-center text-decoration-none text-dark">
+        <img src="/gambar/logo.png" width="35" class="me-2" alt="logo">
+        <h4 class="fw-bold m-0">Joy’s</h4>
+      </a>
+    </div>
+
+
+    <div class="search-container d-flex align-items-center">
+      <div class="position-relative me-3">
+        <input type="text" class="form-control rounded-pill ps-5" id="search-input" placeholder="Search">
+        <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+      </div>
+      <i class="bi bi-cart-check fs-5 text-info me-3" id="cart-btn" style="cursor:pointer;"></i>
+      <i class="bi bi-bookmark fs-5 text-info"></i>
+    </div>
+  </nav>
+
+  <!-- Layout Utama -->
+  <div class="d-flex">
+    <!-- Sidebar -->
+    <aside class="bg-white border-end p-3 sidebar d-flex flex-column" id="sidebar">
+      <h6 class="fw-bold text-danger mb-3">KATEGORI</h6>
+      <ul class="list-unstyled text-secondary" id="category-list">
+        <li class="mb-2"><a href="#" data-category="semua" class="text-decoration-none text-dark active">SEMUA</a></li>
+        <li class="mb-2"><a href="#" data-category="bahan" class="text-decoration-none text-dark">BAHAN POKOK</a></li>
+        <li class="mb-2"><a href="#" data-category="camilan" class="text-decoration-none text-dark">CAMILAN</a></li>
+        <li class="mb-2"><a href="#" data-category="minuman" class="text-decoration-none text-dark">MINUMAN</a></li>
+        <li><a href="#" data-category="makanan" class="text-decoration-none text-dark">MAKANAN INSTANT</a></li>
+      </ul>
+      <div class="mt-auto p-2 mb-5">
+        <button id="logout-btn" class="btn btn-info text-white">
+          <i class="bi bi-box-arrow-right me-2"></i> LOGOUT
+        </button>
+      </div>
+    </aside>
+
+    <main class="p-4 flex-grow-1 bg-light" id="main-content">
+      <div class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-3" id="product-list">
+        <div class="col" data-category="bahan" data-name="Beras" data-price="10000">
+          <div class="card text-center border-0 shadow-sm p-2 product-card">
+            <img src="/gambar/beras.png" class="card-img-top img-fluid mx-auto" alt="Beras">
+            <div class="card-body p-2">
+              <h6 class="fw-bold text-danger mb-1">Beras</h6>
+              <p class="text-muted small mb-0">Rp. 10.000</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col" data-category="bahan" data-name="Tepung Terigu" data-price="12000">
+          <div class="card text-center border-0 shadow-sm p-2 product-card">
+            <img src="/gambar/terigu.png" class="card-img-top img-fluid mx-auto" alt="Tepung Terigu">
+            <div class="card-body p-2">
+              <h6 class="fw-bold text-danger mb-1">Tepung Terigu</h6>
+              <p class="text-muted small mb-0">Rp. 12.000</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col" data-category="bahan" data-name="Gula" data-price="13000">
+          <div class="card text-center border-0 shadow-sm p-2 product-card">
+            <img src="/gambar/gula.png" class="card-img-top img-fluid mx-auto" alt="Gula">
+            <div class="card-body p-2">
+              <h6 class="fw-bold text-danger mb-1">Gula</h6>
+              <p class="text-muted small mb-0">Rp. 13.000</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col" data-category="makanan" data-name="Indomie Goreng" data-price="3000">
+          <div class="card text-center border-0 shadow-sm p-2 product-card">
+            <img src="/gambar/indomieGoreng.png" class="card-img-top img-fluid mx-auto" alt="Indomie Goreng">
+            <div class="card-body p-2">
+              <h6 class="fw-bold text-danger mb-1">Indomie Goreng</h6>
+              <p class="text-muted small mb-0">Rp. 3.000</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col" data-category="camilan" data-name="Beng-Beng" data-price="2500">
+          <div class="card text-center border-0 shadow-sm p-2 product-card">
+            <img src="/gambar/bengbeng.png" class="card-img-top img-fluid mx-auto" alt="Beng-Beng">
+            <div class="card-body p-2">
+              <h6 class="fw-bold text-danger mb-1">Beng-Beng</h6>
+              <p class="text-muted small mb-0">Rp. 2.500</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col" data-category="minuman" data-name="Ale Ale" data-price="1000">
+          <div class="card text-center border-0 shadow-sm p-2 product-card">
+            <img src="/gambar/aleale.png" class="card-img-top img-fluid mx-auto" alt="Ale-Ale">
+            <div class="card-body p-2">
+              <h6 class="fw-bold text-danger mb-1">Ale Ale</h6>
+              <p class="text-muted small mb-0">Rp. 1.000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Panel Order -->
+    <div class="order-panel" id="order-panel">
+      <div class="p-3 border-bottom d-flex justify-content-between align-items-center">
+        <h6 class="fw-bold m-0">Daftar Pesanan</h6>
+        <i class="bi bi-x-lg text-danger" id="close-cart" style="cursor:pointer;"></i>
+      </div>
+      <div class="p-3" id="order-items"></div>
+      <div class="p-3 border-top">
+        <h6>Total: <span id="total-price">Rp. 0</span></h6>
+        <button id="btn-bayar-order" class="btn btn-danger w-100 mt-2">Bayar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- POPUP RINGKASAN PESANAN -->
+<div id="summary-modal" class="summary-modal d-none">
+  <div class="summary-box">
+    <button id="close-summary" class="close-btn">&times;</button>
+
+    <h3 class="text-center mb-3" style="color:#c2574f; font-weight:700;">
+      Daftar Pesanan
+    </h3>
+
+    <div class="d-flex justify-content-between px-4">
+      <span>Item</span>
+      <span id="summary-count">#0</span>
+    </div>
+    <hr>
+
+    <div id="summary-list" class="px-4"></div>
+
+    <div class="d-flex justify-content-between px-4 mt-2 fw-bold">
+      <span>Total</span>
+      <span id="summary-total">Rp0</span>
+    </div>
+
+    <div class="d-flex justify-content-center gap-3 mt-4 mb-2">
+      <button class="btn btn-info px-4" id="summary-edit">Edit</button>
+      <button id="summary-pay" class="btn btn-info px-4" id="summary-pay">Bayar</button>
+    </div>
+  </div>
+</div>
+
+  <!-- POPUP METODE PEMBAYARAN -->
+  <div id="payment-modal" class="payment-modal d-none">
+    <div class="payment-box">
+      <button id="close-payment" class="close-btn">&times;</button>
+      <h4 class="text-center mb-4">Pilih Metode Pembayaran</h4>
+
+      <button class="btn btn-info w-100 py-2 mb-3" id="pay-cash">Tunai</button>
+      <button class="btn btn-info w-100 py-2" id="pay-qris">Qris</button>
+    </div>
+  </div>
+
+  <!-- POPUP PEMBAYARAN TUNAI -->
+  <div id="cash-modal" class="payment-modal d-none">
+    <div class="payment-box text-center">
+      <button id="close-cash" class="close-btn">&times;</button>
+      <h4 class="mb-4">Pembayaran Tunai</h4>
+      <div class="mb-3">
+        <label class="form-label fw-bold">Masukkan Nominal Uang Dibayar:</label>
+        <input type="number" id="cash-amount" class="form-control text-center" placeholder="Rp">
+      </div>
+      <button id="confirm-cash" class="btn btn-info w-100 py-2">Bayar</button>
+    </div>
+  </div>
+
+  <!-- POPUP QRIS -->
+<div id="qris-modal" class="payment-modal d-none">
+  <div class="payment-box text-center">
+    <button id="close-qris" class="close-btn">&times;</button>
+    <h5 class="mb-3"><i class="bi bi-qr-code me-2"></i>Scan QRIS</h5>
+    <div id="qris-code" class="d-flex justify-content-center mb-3"></div>
+    <div class="input-group justify-content-center">
+      <span class="input-group-text">Rp.</span>
+      <input type="text" id="qris-total" class="form-control text-center" readonly>
+    </div>
+  </div>
+</div>
+
+    <!-- POPUP PEMBAYARAN BERHASIL -->
+    <div id="success-modal" class="result-modal d-none">
+      <div class="result-box text-center">
+        <div class="icon-circle bg-success text-white">
+          <i class="bi bi-check-lg fs-1"></i>
+        </div>
+        <h4 class="mt-3 text-danger fw-bold">Pembayaran Berhasil !</h4>
+        <div class="my-3">
+          <div class="d-flex justify-content-between px-4"><span>Order</span><span>#1</span></div>
+          <hr>
+          <div class="d-flex justify-content-between px-4"><span>Total</span><span id="success-total">Rp0</span></div>
+          <div class="d-flex justify-content-between px-4"><span>Jumlah Uang</span><span id="success-amount">Rp0</span></div>
+          <div class="d-flex justify-content-between px-4"><span>Kembalian</span><span id="success-change">Rp0</span></div>
+        </div>
+        <button id="success-home" class="btn btn-info px-4">Home</button>
+      </div>
+    </div>
+
+    <!-- POPUP PEMBAYARAN GAGAL -->
+    <div id="failed-modal" class="result-modal d-none">
+      <div class="result-box text-center">
+        <div class="icon-circle bg-danger text-white">
+          <i class="bi bi-x-lg fs-1"></i>
+        </div>
+        <h4 class="mt-3 text-danger fw-bold">Pembayaran Gagal !</h4>
+        <div class="my-3">
+          <div class="d-flex justify-content-between px-4"><span>Order</span><span>#1</span></div>
+          <hr>
+          <div class="d-flex justify-content-between px-4"><span>Total</span><span id="failed-total">Rp0</span></div>
+          <div class="d-flex justify-content-between px-4"><span>Jumlah Uang</span><span id="failed-amount">Rp0</span></div>
+          <div class="d-flex justify-content-between px-4"><span>Kembalian</span><span id="failed-change">Rp0</span></div>
+        </div>
+        <button id="failed-retry" class="btn btn-info px-4">Coba Lagi</button>
+      </div>
+    </div>
+
+    <!-- POPUP LOGOUT -->
+    <div id="logout-modal" class="payment-modal d-none">
+      <div class="payment-box text-center" style="max-width:400px;">
+        <div class="mb-3">
+          <i class="bi bi-exclamation-octagon text-warning" style="font-size:60px;"></i>
+        </div>
+
+        <h4 class="fw-bold">Kamu yakin!</h4>
+        <p class="text-muted mb-4">Kamu ingin logout?</p>
+
+        <div class="d-flex justify-content-center gap-3">
+          <button id="logout-cancel" class="btn btn-secondary px-4">Batal</button>
+          <button id="logout-confirm" class="btn btn-danger px-4">Iya</button>
+        </div>
+      </div>
+    </div>
+
+  <script src="kasir.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+</body>
+</html>

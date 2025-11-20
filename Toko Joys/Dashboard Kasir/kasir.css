@@ -1,0 +1,314 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  overflow-x: hidden;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.sidebar ul { padding-left: 0; }
+.sidebar ul li a {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+.sidebar ul li a:hover {
+  background-color: #f8d7da;
+  color: #dc3545 !important;
+}
+.sidebar ul li a.active {
+  background-color: #67aebc;
+  color: #fff !important;
+  font-weight: 600;
+}
+.sidebar.collapsed { width: 60px; }
+.sidebar.collapsed h6,
+.sidebar.collapsed ul li a { opacity: 0; pointer-events: none; }
+
+/* === MAIN === */
+#main-content { transition: margin-left 0.3s ease; }
+.sidebar.collapsed + #main-content { margin-left: 60px; }
+
+/* === CARD PRODUK === */
+.card {
+  border-radius: 12px;
+  width: 160px;
+  height: 190px;
+  text-align: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.card:hover { transform: translateY(-5px); }
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* === SEARCH === */
+.search-container input {
+  width: 250px;
+  transition: 0.3s;
+}
+.search-container input:focus {
+  width: 300px;
+}
+
+/* === ORDER PANEL === */
+.order-panel {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  transition: right 0.3s ease;
+  z-index: 1050;
+}
+.order-panel.active { right: 0; }
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.order-item h6 {
+  font-size: 14px;
+  margin: 0;
+}
+.order-item p {
+  font-size: 13px;
+  color: gray;
+  margin: 0;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -220px;
+    z-index: 1000;
+  }
+  .sidebar.active { left: 0; }
+}
+
+/* === ORDER ITEM STYLE === */
+.order-item {
+  border: 1px solid #dce3e8;
+  border-left: 6px solid #5ab7c0;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.order-item h6 {
+  color: #c2574f;
+}
+
+.order-bar {
+  width: 5px;
+  height: 40px;
+  background-color: #56b6b9;
+  border-radius: 4px;
+}
+
+.btn-outline-secondary {
+  border: 1px solid #ccc !important;
+  color: #333;
+  font-weight: bold;
+  padding: 2px 6px;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #eaf5f5;
+}
+
+.order-summary {
+  font-size: 13px;
+}
+
+/* === Tombol Bayar Pink === */
+.btn-danger {
+  background-color: #67aebc !important; /* Warna pink utama */
+  border-color: #67aebc !important;
+}
+
+.btn-danger:hover {
+  background-color: #67aebc !important; /* Warna pink lebih tua saat hover */
+  border-color: #67aebc !important;
+}
+
+/* === POPUP PEMBAYARAN === */
+.payment-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.payment-box {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 350px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.payment-box h4 {
+  color: #b55e52;
+  font-weight: bold;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  color: #c25550;
+}
+
+.btn-info {
+  background: #67aebc !important;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* === POPUP RINGKASAN PESANAN === */
+.summary-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.summary-box {
+  width: 450px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 25px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.summary-box hr {
+  margin: 8px 0;
+  border: 0.5px solid #ccc;
+}
+
+.btn-info {
+  background: #67aebc !important;
+  border: none;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  color: #c25550;
+}
+
+#pay-cash,
+#pay-qris,
+#summary-edit,
+#summary-pay {
+  color: white !important;
+}
+
+/* === POPUP QRIS & TUNAI === */
+#cash-modal .payment-box,
+#qris-modal .payment-box {
+  width: 350px;
+  border: 2px solid #67aebc;
+  text-align: center;
+}
+
+#cash-modal input,
+#qris-modal input {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  padding: 6px;
+}
+
+#qris-modal img {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+#qris-code canvas {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  background: #fff;
+}
+
+/* === POPUP HASIL PEMBAYARAN === */
+.result-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4000;
+}
+
+.result-box {
+  background: #fff;
+  border-radius: 15px;
+  width: 420px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.bg-success { background: #28a745 !important; }
+.bg-danger { background: #dc3545 !important; }
+
+.result-box hr {
+  margin: 8px 0;
+  border: 0.5px solid #ccc;
+}
+
+.result-box button {
+  font-weight: 600;
+  font-size: 17px;
+}
+

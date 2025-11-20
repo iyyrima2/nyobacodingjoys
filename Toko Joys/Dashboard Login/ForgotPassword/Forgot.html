@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lupa Kata Sandi | Joy’s</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="Forgot.css">
+</head>
+<body>
+
+  <div class="container-fluid vh-100 d-flex align-items-center justify-content-center bg-light">
+    <div class="row shadow rounded-4 bg-white overflow-hidden w-80" style="max-width: 1000px;">
+
+      <!-- Kolom kiri -->
+      <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
+        <div class="d-flex align-items-center mb-5">
+          <img src="/gambar/logo.png" alt="logo" width="35" class="me-2">
+          <h4 class="fw-bold m-0">Joy’s</h4>
+        </div>
+
+        <a href="../Login/Login.html" class="text-secondary small text-decoration-none mb-3 d-inline-flex align-items-center">
+          <i class="bi bi-arrow-left me-2"></i> Kembali ke login
+        </a>
+
+        <h3 class="fw-bold mb-3">Lupa kata sandi?</h3>
+        <p class="text-muted mb-4">
+          Jangan khawatir, itu bisa terjadi pada siapa saja. Masukkan email Anda di bawah untuk memulihkan kata sandi.
+        </p>
+
+        <form action="../Verifikasi/verifikasi.html" method="get">
+          <div class="mb-3">
+            <label class="form-label small text-muted mb-1">Email</label>
+            <input type="email" class="form-control" placeholder="Masukkan email Anda" required>
+          </div>
+          <button type="submit" class="btn btn-info text-white w-100 mb-4"><b>Kirim</b></button>
+
+          <div class="text-center text-muted mb-3">Atau login dengan</div>
+
+          <div class="d-flex justify-content-center gap-3">
+            <button type="button" class="btn btn-outline-primary social-btn">
+              <i class="bi bi-facebook"></i>
+            </button>
+            <button type="button" class="btn btn-outline-danger social-btn">
+              <img src="/gambar/google.png" alt="Google Logo" class="social-icon">
+            </button>
+            <button type="button" class="btn btn-outline-dark social-btn">
+              <i class="bi bi-apple"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Kolom kanan -->
+      <div class="col-md-6 d-flex align-items-center justify-content-center p-4">
+        <img src="/gambar/forgot.png" alt="forgot illustration" class="img-fluid rounded-3" style="max-height: 480px;">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

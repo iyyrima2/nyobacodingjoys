@@ -1,0 +1,25 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.btn-info {
+  background-color: #66b6c8;
+  border: none;
+}
+
+.btn-info:hover {
+  background-color: #57a3b4;
+}
+
+.input-group .form-control {
+  border-right: none;
+}
+
+.input-group .btn {
+  border-left: none;
+  border-color: #dee2e6;
+}

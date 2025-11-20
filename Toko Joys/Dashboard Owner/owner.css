@@ -1,0 +1,54 @@
+body {
+  background-color: #f6f8fa;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  position: fixed;
+}
+
+.sidebar ul {
+  padding-left: 0;
+  margin-top: 30px;
+}
+
+.sidebar a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 0;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.sidebar a.active {
+  color: #40b8c4;
+  border-left: 3px solid #40b8c4;
+  padding-left: 10px;
+}
+
+.content {
+  margin-left: 240px;
+  padding: 30px;
+}
+
+/* Summary Cards */
+.summary-card {
+  background: #d7eff1;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Chart Section */
+.chart-section {
+  background: #e9f4f5;
+  border-radius: 8px;
+  padding: 20px;
+}
